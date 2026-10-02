@@ -20,6 +20,7 @@ npm test      # compiles and runs the tests with the Node.js test runner
 
 | File | What it shows |
 |------|---------------|
+| `src/00-quick-reference.ts` | Every operation from the article in one place |
 | `src/01-create.ts` | Creating a Map, with and without initial entries |
 | `src/02-operations.ts` | `set()`, `get()`, `has()`, `delete()`, `clear()`, `size` |
 | `src/03-get-undefined.ts` | Handling `undefined` from `get()` |

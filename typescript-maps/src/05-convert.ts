@@ -1,17 +1,23 @@
 // Section 5: Converting a Map to an array, object or JSON
 export function convertMaps(): void {
-  const stock = new Map([["BOOK-101", 12], ["BOOK-102", 5]]);
+  const ages = new Map([["Lokesh", 37], ["Raj", 35]]);
 
-  console.log([...stock]); // [ [ 'BOOK-101', 12 ], [ 'BOOK-102', 5 ] ]
-  console.log(Object.fromEntries(stock)); // { 'BOOK-101': 12, 'BOOK-102': 5 }
-  console.log(new Map(Object.entries({ "BOOK-201": 3 }))); // Map(1) { 'BOOK-201' => 3 }
+  // 1. Map to array and object
+  const pairs = [...ages]; // pairs = [["Lokesh", 37], ["Raj", 35]]
+  const obj = Object.fromEntries(ages); // obj = { Lokesh: 37, Raj: 35 }
+  console.log(pairs, obj);
 
-  console.log(JSON.stringify(stock)); // {}  (the entries are lost)
+  // 2. Object to Map
+  const fromObj = new Map(Object.entries({ John: 40 })); // John => 40
+  console.log(fromObj);
 
-  const json = JSON.stringify(Object.fromEntries(stock));
-  console.log(json); // {"BOOK-101":12,"BOOK-102":5}
+  // 3. Map to JSON and back
+  const wrong = JSON.stringify(ages); // wrong = {}
+  const json = JSON.stringify(Object.fromEntries(ages)); // json = {"Lokesh":37,"Raj":35}
+  console.log(wrong, json);
 
   const parsed: Record<string, number> = JSON.parse(json);
   const restored = new Map(Object.entries(parsed));
-  console.log(restored.get("BOOK-102")); // 5
+  const rajAge = restored.get("Raj"); // rajAge = 35
+  console.log(rajAge);
 }

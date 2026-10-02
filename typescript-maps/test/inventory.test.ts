@@ -12,14 +12,14 @@ import {
 
 test("increment starts a missing key at 0", () => {
   const stock = new Map<string, number>();
-  assert.equal(increment(stock, "BOOK-101"), 1);
-  assert.equal(increment(stock, "BOOK-101", 4), 5);
+  assert.equal(increment(stock, "Lokesh"), 1);
+  assert.equal(increment(stock, "Lokesh", 4), 5);
 });
 
 test("toObject and fromObject round-trip", () => {
-  const stock = new Map([["BOOK-101", 12], ["BOOK-102", 5]]);
+  const stock = new Map([["Lokesh", 12], ["Raj", 5]]);
   const obj = toObject(stock);
-  assert.deepEqual(obj, { "BOOK-101": 12, "BOOK-102": 5 });
+  assert.deepEqual(obj, { "Lokesh": 12, "Raj": 5 });
   assert.deepEqual(fromObject(obj), stock);
 });
 
@@ -42,7 +42,7 @@ test("groupByStatus groups orders by status", () => {
 });
 
 test("JSON.stringify writes an empty object for a Map", () => {
-  const stock = new Map([["BOOK-101", 12]]);
+  const stock = new Map([["Lokesh", 12]]);
   assert.equal(JSON.stringify(stock), "{}");
-  assert.equal(JSON.stringify(Object.fromEntries(stock)), '{"BOOK-101":12}');
+  assert.equal(JSON.stringify(Object.fromEntries(stock)), '{"Lokesh":12}');
 });

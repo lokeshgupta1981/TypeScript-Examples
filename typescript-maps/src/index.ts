@@ -1,3 +1,4 @@
+import { quickReference } from "./00-quick-reference.js";
 import { createMaps } from "./01-create.js";
 import { basicOperations } from "./02-operations.js";
 import { handleMissingKeys } from "./03-get-undefined.js";
@@ -7,6 +8,7 @@ import { sortAndGroup } from "./06-sort-group.js";
 import { keyTypes } from "./07-keys.js";
 
 const demos: Array<[string, () => void]> = [
+  ["Quick reference", quickReference],
   ["1. Create a Map", createMaps],
   ["2. Add, read, update and delete", basicOperations],
   ["3. Handle missing keys", handleMissingKeys],

@@ -1,19 +1,19 @@
 // Section 3: Handling undefined from get()
 export function handleMissingKeys(): void {
-  const stock = new Map<string, number>([["BOOK-101", 12]]);
+  const ages = new Map<string, number>([["Lokesh", 37]]);
 
-  // Option 1: a default value with ??
-  const quantity = stock.get("BOOK-999") ?? 0;
-  console.log(quantity); // 0
+  // 1. Default value
+  const age1 = ages.get("Brian") ?? 0; // age1 = 0
+  console.log(age1);
 
-  // Option 2: store the result, then check it; TypeScript narrows the type to number
-  const found = stock.get("BOOK-101");
-  if (found !== undefined) {
-    console.log(found + 1); // 13
+  // 2. Check the result; the type narrows to number
+  const age2 = ages.get("Lokesh");
+  if (age2 !== undefined) {
+    console.log(age2 + 1); // 38
   }
 
-  // Option 3: the non-null assertion (!) after has()
-  if (stock.has("BOOK-101")) {
-    console.log(stock.get("BOOK-101")! + 1); // 13
+  // 3. Non-null assertion after has()
+  if (ages.has("Lokesh")) {
+    console.log(ages.get("Lokesh")! + 1); // 38
   }
 }

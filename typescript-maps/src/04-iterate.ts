@@ -1,25 +1,28 @@
 // Section 4: Iterating over a Map
 export function iterateMaps(): void {
-  const stock = new Map([
-    ["BOOK-101", 12],
-    ["BOOK-102", 5],
-    ["BOOK-103", 8],
+  const ages = new Map([
+    ["Lokesh", 37],
+    ["Raj", 35],
+    ["John", 40],
   ]);
 
-  for (const [sku, quantity] of stock) {
-    console.log(sku, quantity); // BOOK-101 12, BOOK-102 5, BOOK-103 8
+  // 1. Entries
+  for (const [name, age] of ages) {
+    console.log(name, age); // Lokesh 37, Raj 35, John 40
   }
 
-  console.log([...stock.keys()]); // [ 'BOOK-101', 'BOOK-102', 'BOOK-103' ]
-  console.log([...stock.values()]); // [ 12, 5, 8 ]
+  // 2. Keys and values
+  const names = [...ages.keys()]; // names = ["Lokesh", "Raj", "John"]
+  const values = [...ages.values()]; // values = [37, 35, 40]
+  console.log(names, values);
 
-  stock.forEach((quantity, sku) => {
-    console.log(sku, quantity); // same output; note the order: value, then key
-  });
+  // 3. forEach: value first, then key
+  ages.forEach((age, name) => console.log(name, age));
 
   // How updates change the order
-  stock.set("BOOK-101", 20); // existing key: stays first
-  stock.delete("BOOK-102");
-  stock.set("BOOK-102", 5); // re-added key: moves to the end
-  console.log([...stock.keys()]); // [ 'BOOK-101', 'BOOK-103', 'BOOK-102' ]
+  ages.set("Lokesh", 38); // stays first
+  ages.delete("Raj");
+  ages.set("Raj", 35); // moves to the end
+  const order = [...ages.keys()]; // order = ["Lokesh", "John", "Raj"]
+  console.log(order);
 }

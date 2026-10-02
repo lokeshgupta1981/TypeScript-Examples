@@ -1,23 +1,26 @@
 // Section 6: Sorting a Map and grouping with Map.groupBy()
-type OrderStatus = "NEW" | "SHIPPED" | "CANCELLED";
-interface Order { id: number; status: OrderStatus; }
+type Status = "new" | "shipped" | "cancelled";
+interface Order { id: number; status: Status; }
 
 export function sortAndGroup(): void {
-  const stock = new Map([["BOOK-103", 8], ["BOOK-101", 12], ["BOOK-102", 5]]);
+  const ages = new Map([["Raj", 35], ["John", 40], ["Lokesh", 37]]);
 
-  const byKey = new Map([...stock].sort(([a], [b]) => a.localeCompare(b)));
-  console.log(byKey); // Map(3) { 'BOOK-101' => 12, 'BOOK-102' => 5, 'BOOK-103' => 8 }
+  // 1. By key
+  const byName = new Map([...ages].sort(([a], [b]) => a.localeCompare(b)));
+  console.log(byName); // John 40, Lokesh 37, Raj 35
 
-  const byValue = new Map([...stock].sort(([, a], [, b]) => a - b));
-  console.log(byValue); // Map(3) { 'BOOK-102' => 5, 'BOOK-103' => 8, 'BOOK-101' => 12 }
+  // 2. By value
+  const byAge = new Map([...ages].sort(([, a], [, b]) => a - b));
+  console.log(byAge); // Raj 35, Lokesh 37, John 40
 
   const orders: Order[] = [
-    { id: 1, status: "NEW" },
-    { id: 2, status: "SHIPPED" },
-    { id: 3, status: "NEW" },
+    { id: 1, status: "new" },
+    { id: 2, status: "shipped" },
+    { id: 3, status: "new" },
   ];
 
-  const byStatus: Map<OrderStatus, Order[]> = Map.groupBy(orders, (order) => order.status);
-  console.log(byStatus.get("NEW")?.map((o) => o.id)); // [ 1, 3 ]
-  console.log([...byStatus.keys()]); // [ 'NEW', 'SHIPPED' ]
+  const byStatus: Map<Status, Order[]> = Map.groupBy(orders, (o) => o.status);
+  const newIds = byStatus.get("new")?.map((o) => o.id); // newIds = [1, 3]
+  const statuses = [...byStatus.keys()]; // statuses = ["new", "shipped"]
+  console.log(newIds, statuses);
 }
