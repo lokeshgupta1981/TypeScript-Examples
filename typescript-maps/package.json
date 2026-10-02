@@ -1,0 +1,19 @@
+{
+  "name": "typescript-maps",
+  "version": "1.0.0",
+  "description": "Source code for the howtodoinjava.com article on TypeScript Map",
+  "type": "module",
+  "private": true,
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "tsc && node dist/src/index.js",
+    "test": "tsc && node --test \"dist/test/**/*.test.js\""
+  },
+  "devDependencies": {
+    "@types/node": "26.6.4",
+    "typescript": "7.0.2"
+  }
+}
