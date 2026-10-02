@@ -1,0 +1,22 @@
+import { quickReference } from "./00-quick-reference.js";
+import { comparisonTable } from "./01-comparison-table.js";
+import { coercionRules } from "./02-coercion-rules.js";
+import { typescriptChecks } from "./03-typescript-checks.js";
+import { nullCheck } from "./04-null-check.js";
+import { nanAndZero } from "./05-nan-and-zero.js";
+import { objects } from "./06-objects.js";
+
+console.log("=== Quick reference ===");
+quickReference();
+console.log("=== 1. == vs === results ===");
+comparisonTable();
+console.log("=== 2. Coercion rules of == ===");
+coercionRules();
+console.log("=== 3. What TypeScript checks ===");
+typescriptChecks();
+console.log("=== 4. The == null check ===");
+nullCheck();
+console.log("=== 5. NaN, -0 and Object.is() ===");
+nanAndZero();
+console.log("=== 6. Objects ===");
+objects();

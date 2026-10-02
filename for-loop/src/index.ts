@@ -1,0 +1,22 @@
+import { quickReference } from "./00-quick-reference.js";
+import { classicFor } from "./01-classic-for.js";
+import { forOf } from "./02-for-of.js";
+import { forIn } from "./03-for-in.js";
+import { forEachLoop } from "./04-foreach.js";
+import { breakContinue } from "./05-break-continue.js";
+import { collections } from "./06-collections.js";
+
+console.log("=== Quick reference ===");
+quickReference();
+console.log("=== Classic for ===");
+classicFor();
+console.log("=== for...of ===");
+forOf();
+console.log("=== for...in ===");
+forIn();
+console.log("=== forEach ===");
+forEachLoop();
+console.log("=== break and continue ===");
+breakContinue();
+console.log("=== Map, Set and objects ===");
+collections();

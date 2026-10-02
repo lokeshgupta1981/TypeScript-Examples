@@ -1,0 +1,20 @@
+{
+  "name": "transpiler-vs-compiler",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "tsc && node dist/src/index.js",
+    "emit:es2024": "tsc samples/cart.ts --ignoreConfig --target es2024 --module esnext --outDir out/es2024",
+    "emit:es2015": "tsc samples/cart.ts --ignoreConfig --target es2015 --module esnext --outDir out/es2015",
+    "strip": "node scripts/strip-types.js"
+  },
+  "devDependencies": {
+    "@types/node": "26.6.4",
+    "typescript": "7.0.2"
+  }
+}

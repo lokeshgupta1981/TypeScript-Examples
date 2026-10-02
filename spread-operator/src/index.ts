@@ -1,0 +1,25 @@
+import { quickReference } from "./00-quick-reference.js";
+import { arrays } from "./01-arrays.js";
+import { objects } from "./02-objects.js";
+import { shallowCopy } from "./03-shallow-copy.js";
+import { functionArguments } from "./04-function-arguments.js";
+import { rest } from "./05-rest.js";
+import { iterables } from "./06-iterables.js";
+import { tuples } from "./07-tuples.js";
+
+console.log("=== Quick reference ===");
+quickReference();
+console.log("=== 1. Arrays ===");
+arrays();
+console.log("=== 2. Objects ===");
+objects();
+console.log("=== 3. Shallow copy ===");
+shallowCopy();
+console.log("=== 4. Function arguments ===");
+functionArguments();
+console.log("=== 5. Rest parameters and destructuring ===");
+rest();
+console.log("=== 6. Strings, Sets and Maps ===");
+iterables();
+console.log("=== 7. Tuple types ===");
+tuples();

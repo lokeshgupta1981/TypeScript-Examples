@@ -1,0 +1,28 @@
+import { quickReference } from "./00-quick-reference.js";
+import { operatorList } from "./01-operator-list.js";
+import { division } from "./02-division.js";
+import { remainder } from "./03-remainder.js";
+import { exponentiation } from "./04-exponentiation.js";
+import { incrementDecrement } from "./05-increment-decrement.js";
+import { compoundAssignment } from "./06-compound-assignment.js";
+import { stringsAndUnions } from "./07-strings-and-unions.js";
+import { precisionAndBigInt } from "./08-precision-bigint.js";
+
+console.log("=== Quick reference ===");
+quickReference();
+console.log("=== 1. Operator list ===");
+operatorList();
+console.log("=== 2. Division ===");
+division();
+console.log("=== 3. Remainder ===");
+remainder();
+console.log("=== 4. Exponentiation ===");
+exponentiation();
+console.log("=== 5. Increment and decrement ===");
+incrementDecrement();
+console.log("=== 6. Compound assignment ===");
+compoundAssignment();
+console.log("=== 7. Strings and union types ===");
+stringsAndUnions();
+console.log("=== 8. Floating point and BigInt ===");
+precisionAndBigInt();

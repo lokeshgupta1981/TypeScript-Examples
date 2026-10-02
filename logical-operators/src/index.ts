@@ -1,0 +1,25 @@
+import { quickReference } from "./00-quick-reference.js";
+import { andOrNot } from "./01-and-or-not.js";
+import { shortCircuit } from "./02-short-circuit.js";
+import { returnValues } from "./03-return-values.js";
+import { nullishCoalescing } from "./04-nullish-coalescing.js";
+import { optionalChaining } from "./05-optional-chaining.js";
+import { logicalAssignment } from "./06-logical-assignment.js";
+import { narrowing } from "./07-narrowing.js";
+
+console.log("=== Quick reference ===");
+quickReference();
+console.log("=== 1. AND, OR and NOT ===");
+andOrNot();
+console.log("=== 2. Short-circuit evaluation ===");
+shortCircuit();
+console.log("=== 3. Return values ===");
+returnValues();
+console.log("=== 4. Nullish coalescing ===");
+nullishCoalescing();
+console.log("=== 5. Optional chaining ===");
+optionalChaining();
+console.log("=== 6. Logical assignment ===");
+logicalAssignment();
+console.log("=== 7. Narrowing ===");
+narrowing();

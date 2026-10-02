@@ -1,0 +1,20 @@
+{
+  "name": "enums",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "tsc && node dist/src/index.js",
+    "strip:enum": "node strip-demo/enum.ts",
+    "strip:as-const": "node strip-demo/as-const.ts",
+    "check:erasable": "tsc -p tsconfig.erasable.json"
+  },
+  "devDependencies": {
+    "@types/node": "26.6.4",
+    "typescript": "7.0.2"
+  }
+}

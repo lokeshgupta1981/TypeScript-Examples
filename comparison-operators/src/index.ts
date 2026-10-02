@@ -1,0 +1,25 @@
+import { quickReference } from "./00-quick-reference.js";
+import { operatorTable } from "./01-operator-table.js";
+import { numbers } from "./02-numbers.js";
+import { strings } from "./03-strings.js";
+import { dates } from "./04-dates.js";
+import { objects } from "./05-objects.js";
+import { nullAndUndefined } from "./07-null-undefined.js";
+import { compilerChecks } from "./06-compiler-checks.js";
+
+console.log("=== Quick reference ===");
+quickReference();
+console.log("=== 1. Operator table ===");
+operatorTable();
+console.log("=== 2. Numbers ===");
+numbers();
+console.log("=== 3. Strings ===");
+strings();
+console.log("=== 4. Dates ===");
+dates();
+console.log("=== 5. Objects and arrays ===");
+objects();
+console.log("=== 6. Compiler checks ===");
+compilerChecks();
+console.log("=== 7. null and undefined ===");
+nullAndUndefined();

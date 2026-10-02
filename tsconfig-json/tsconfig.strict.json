@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    // 1. Output JavaScript version and built-in API types
+    "target": "es2024",
+    "lib": ["es2024"],
+
+    // 2. Module format and import resolution for Node.js
+    "module": "nodenext",
+
+    // 3. Source root and output folder
+    "rootDir": ".",
+    "outDir": "dist",
+
+    // 4. Type checks
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+
+    // 5. Global type packages (@types/node)
+    "types": ["node"],
+
+    // 6. Import rules and Node.js type stripping rules
+    "verbatimModuleSyntax": true,
+    "erasableSyntaxOnly": true,
+
+    // 7. Do not check .d.ts files in node_modules
+    "skipLibCheck": true
+  },
+  "include": ["src"]
+}
