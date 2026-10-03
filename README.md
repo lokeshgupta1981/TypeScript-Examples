@@ -23,8 +23,12 @@ Runnable source code for the TypeScript tutorials on [howtodoinjava.com](https:/
 | [functions-rest-optional-default-params](functions-rest-optional-default-params) | [TypeScript Function Types](https://howtodoinjava.com/typescript/functions-rest-optional-default-params/) |
 | [generic-function-class-interface-examples](generic-function-class-interface-examples) | [TypeScript Generic Function, Class and Interface](https://howtodoinjava.com/typescript/generic-function-class-interface-examples/) |
 | [instanceof-example](instanceof-example) | [TypeScript instanceof with Class, Array and Interface](https://howtodoinjava.com/typescript/instanceof-example/) |
+| [jasmine-unit-testing](jasmine-unit-testing) | [Jasmine Unit Testing Tutorial with TypeScript Examples](https://howtodoinjava.com/typescript/jasmine-unit-testing-tutorial/) |
 | [javascript-array-find](javascript-array-find) | [TypeScript - How to Find Element in Array](https://howtodoinjava.com/typescript/javascript-array-find/) |
 | [javascript-variable-hoisting](javascript-variable-hoisting) | [JavaScript Variable Hoisting](https://howtodoinjava.com/typescript/javascript-variable-hoisting/) |
+| [js-check-if-number](js-check-if-number) | [JavaScript Check if Variable is a Number (and NaN Traps)](https://howtodoinjava.com/typescript/check-if-variable-is-number/) |
+| [js-global-variables](js-global-variables) | [How to Declare a JavaScript Global Variable With globalThis](https://howtodoinjava.com/typescript/javascript-correct-way-to-define-global-variables/) |
+| [js-mask-sensitive-json-logs](js-mask-sensitive-json-logs) | [Mask Sensitive Data in Logs in JavaScript (JSON and pino)](https://howtodoinjava.com/typescript/mask-sensitive-info-json-logs/) |
 | [literal-types](literal-types) | [TypeScript Literal Types](https://howtodoinjava.com/typescript/literal-types/) |
 | [logical-operators](logical-operators) | [TypeScript Logical Operators](https://howtodoinjava.com/typescript/logical-operators/) |
 | [method-overriding-example](method-overriding-example) | [TypeScript Method Override (with Examples)](https://howtodoinjava.com/typescript/method-overriding-example/) |

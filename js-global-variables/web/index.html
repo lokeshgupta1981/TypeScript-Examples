@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Global variables in the browser</title>
+</head>
+<body>
+  <p>Open the browser console (F12) to see the results.</p>
+
+  <!-- Classic script: top-level var becomes a window property -->
+  <script>
+    var appName = "Shop";
+    let apiBaseUrl = "/api";
+    const maxUsers = 10;
+
+    console.log("window.appName =", window.appName);          // "Shop"
+    console.log("window.apiBaseUrl =", window.apiBaseUrl);    // undefined
+    console.log("window.maxUsers =", window.maxUsers);        // undefined
+    console.log("globalThis === window:", globalThis === window);   // true
+  </script>
+
+  <!-- A second classic script sees the let variable of the first one -->
+  <script>
+    console.log("apiBaseUrl =", apiBaseUrl);                  // "/api"
+  </script>
+
+  <!-- window.name already exists, so this var is converted to a string -->
+  <script>
+    var name = 42;
+    console.log("typeof name =", typeof name);                // "string"
+  </script>
+
+  <!-- Module script: nothing lands on window -->
+  <script type="module">
+    var moduleVar = 1;
+    console.log("window.moduleVar =", window.moduleVar);      // undefined
+    console.log("top-level this =", this);                    // undefined
+  </script>
+</body>
+</html>

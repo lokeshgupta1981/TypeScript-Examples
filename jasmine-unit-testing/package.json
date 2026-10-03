@@ -1,0 +1,23 @@
+{
+  "name": "jasmine-unit-testing",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "tsc && jasmine",
+    "test:ts": "jasmine --config=spec/support/jasmine-ts.mjs",
+    "demo:hooks": "jasmine --config=spec/support/jasmine-ts.mjs --random=false demo/lifecycle.spec.ts",
+    "demo:failing": "jasmine --config=spec/support/jasmine-ts.mjs --random=false demo/failing.spec.ts",
+    "demo:focus": "jasmine --config=spec/support/jasmine-ts.mjs demo/focus.spec.ts"
+  },
+  "devDependencies": {
+    "@types/jasmine": "7.0.0",
+    "@types/node": "26.6.4",
+    "jasmine": "7.0.0",
+    "typescript": "7.0.2"
+  }
+}

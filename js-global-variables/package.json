@@ -1,0 +1,20 @@
+{
+  "name": "js-global-variables",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "tsc && node dist/src/index.js",
+    "start:env": "tsc && node --env-file=app.env dist/src/index.js",
+    "js": "node js/global-scope.cjs && node js/module-scope.mjs",
+    "check:web": "tsc -p web"
+  },
+  "devDependencies": {
+    "@types/node": "26.6.4",
+    "typescript": "7.0.2"
+  }
+}

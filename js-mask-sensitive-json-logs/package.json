@@ -1,0 +1,21 @@
+{
+  "name": "js-mask-sensitive-json-logs",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "tsc && node dist/src/index.js",
+    "bench": "tsc && node dist/src/benchmark.js"
+  },
+  "dependencies": {
+    "pino": "10.4.0"
+  },
+  "devDependencies": {
+    "@types/node": "26.6.4",
+    "typescript": "7.0.2"
+  }
+}
